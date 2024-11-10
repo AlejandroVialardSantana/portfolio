@@ -11,7 +11,7 @@ const Layout = ({ children }: LayoutProps) => {
     <>
       <Navbar />
 
-      <Flex direction="column" align="center" maxW="container.md" mx="auto" p={4} mt="60px">
+      <Flex bg="background.dark" direction="column" align="center" maxW="container.md" mx="auto" p={4} mt="60px">
         {children}
       </Flex>
     </>
