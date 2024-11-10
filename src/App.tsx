@@ -1,11 +1,16 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Home } from "./pages";
+import { BrowserRouter as Router } from "react-router-dom";
+import { Home, About, Experience, Projects, Contact } from "./pages";
+import Layout from "./components/Layout";
 
 const App = () => (
   <Router>
-    <Routes>
-      <Route path="/" element={<Home />} />
-    </Routes>
+    <Layout>
+      <Home />
+      <About />
+      <Experience />
+      <Projects />
+      <Contact />
+    </Layout>
   </Router>
 );
 
