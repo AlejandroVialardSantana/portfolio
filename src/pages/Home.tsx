@@ -30,6 +30,7 @@ const Home = () => (
       justify="center"
       gap={12}
     >
+      {/* Contenedor de la imagen de perfil con forma y efecto */}
       <Box
         position="relative"
         w={{ base: "280px", md: "380px" }}
@@ -55,11 +56,14 @@ const Home = () => (
           borderRadius="60% 40% 30% 70%/60% 30% 70% 40%"
         >
           <Image
-            src="./src/assets/react.svg"
+            src="./src/assets/perfil.webp"
             alt="Alejandro Vialard Santana"
-            objectFit="cover"
+            objectFit="contain"
             w="100%"
             h="100%"
+            mt={8}
+            _hover={{ transform: "scale(1.1)" }}
+            transition="all 0.3s"
           />
         </Box>
       </Box>
