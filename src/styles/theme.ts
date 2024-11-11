@@ -1,4 +1,4 @@
-import { createSystem, defaultConfig } from "@chakra-ui/react"
+import { createSystem, defaultConfig } from "@chakra-ui/react";
 
 export const system = createSystem(defaultConfig, {
   theme: {
@@ -27,6 +27,14 @@ export const system = createSystem(defaultConfig, {
         hoverAccent: {
           light: { value: "#A3B2C2" },
           dark: { value: "#86A1B1" },
+        },
+        timeline: {
+          light: { value: "#91A7B4" },
+          dark: { value: "#91A7B4" },
+        },
+        borderAccent: {
+          light: { value: "#A8BFC9" }, 
+          dark: { value: "#6B8998" } 
         },
       },
     },
