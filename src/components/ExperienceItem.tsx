@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Text, VStack, Circle } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text, VStack, Circle, HStack } from "@chakra-ui/react";
 
 interface ExperienceItemProps {
   title: string;
@@ -6,9 +6,10 @@ interface ExperienceItemProps {
   date: string;
   type: string;
   description: string[];
+  technologies: JSX.Element[];
 }
 
-const ExperienceItem = ({ title, company, date, type, description }: ExperienceItemProps) => (
+const ExperienceItem = ({ title, company, date, type, description, technologies }: ExperienceItemProps) => (
   <Flex gap={4} mb={12}>
     <Flex flexDir="column" alignItems="center">
       <Box 
@@ -50,8 +51,17 @@ const ExperienceItem = ({ title, company, date, type, description }: ExperienceI
           </Text>
         ))}
       </VStack>
+      
+      <HStack gap={4} mt={4}>
+        {technologies.map((TechIcon, index) => (
+          <Box key={index} as="span" fontSize="2xl" color="textPrimary.dark">
+            {TechIcon}
+          </Box>
+        ))}
+      </HStack>
     </Box>
   </Flex>
 );
 
 export default ExperienceItem;
+

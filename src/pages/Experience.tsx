@@ -1,5 +1,7 @@
 import ExperienceItem from "@/components/ExperienceItem";
 import { Box, Heading, VStack, useBreakpointValue } from "@chakra-ui/react";
+import { FaReact, FaPhp, FaGitAlt } from "react-icons/fa";
+import { SiTypescript, SiCodeigniter, SiStorybook, SiVitest, SiCypress, SiDocker } from "react-icons/si";
 
 const experiences = [
   {
@@ -11,6 +13,15 @@ const experiences = [
       "Desarrollé una interfaz de chat en tiempo real para WhatsApp con WebSockets.",
       "Ejecuté pruebas en app de check-in con Vitest y Cypress.",
       "Creé una librería de componentes en React y TypeScript, documentada en Storybook."
+    ],
+    technologies: [
+      <FaReact key="react" />,
+      <SiTypescript key="typescript" />,
+      <SiStorybook key="storybook" />,
+      <SiCypress key="cypress" />,
+      <SiVitest key="vitest" />,
+      <FaGitAlt key="git" />,
+      <SiDocker key="docker" />
     ]
   },
   {
@@ -21,6 +32,14 @@ const experiences = [
     description: [
       "Desarrollé backend para mensajería automatizada con PHP y CodeIgniter 4.",
       "Colaboré en el frontend con React y Carbon Design System."
+    ],
+    technologies: [
+      <FaPhp key="php" />,
+      <SiCodeigniter key="codeigniter" />,
+      <FaReact key="react" />,
+      <SiTypescript key="typescript" />,
+      <FaGitAlt key="git" />,
+      <SiDocker key="docker" />
     ]
   }
 ];
