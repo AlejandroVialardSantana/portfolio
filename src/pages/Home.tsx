@@ -1,22 +1,22 @@
-import { 
-  Box, 
-  Button, 
-  Flex, 
-  Heading, 
-  Image, 
-  Link, 
-  Text, 
-  VStack, 
+import {
+  Box,
+  Button,
+  Flex,
+  Heading,
+  Image,
+  Link,
+  Text,
+  VStack,
   HStack,
 } from "@chakra-ui/react";
 import { FaGithub, FaLinkedin, FaFileDownload } from 'react-icons/fa';
 
 const Home = () => (
-  <Box 
-    as="section" 
-    id="home" 
-    minH="100vh" 
-    display="flex" 
+  <Box
+    as="section"
+    id="home"
+    minH="calc(100vh - 90px)"
+    display="flex"
     alignItems="center"
     bg="background.dark"
     py={20}
@@ -28,67 +28,85 @@ const Home = () => (
       direction={{ base: "column", md: "row" }}
       align="center"
       justify="center"
-      gap={10}
+      gap={12}
     >
-      <Box 
-        flexShrink={0}
-        w={{ base: "200px", md: "300px" }}
-        h={{ base: "200px", md: "300px" }}
+      <Box
+        position="relative"
+        w={{ base: "280px", md: "380px" }}
+        h={{ base: "280px", md: "380px" }}
       >
-        <Image
-          src="/ruta-a-tu-imagen.jpg"
-          alt="Tu Nombre"
-          borderRadius="full"
-          objectFit="cover"
+        <Box
+          position="absolute"
+          top="50%"
+          left="50%"
+          transform="translate(-50%, -50%)"
           w="100%"
           h="100%"
-          border="4px solid"
-          borderColor="accent.dark"
+          bgGradient="radial(closest-side, rgba(145,167,180,0.5), transparent)"
+          borderRadius="60% 40% 30% 70%/60% 30% 70% 40%"
+          boxShadow="0px 0px 20px rgba(145,167,180,0.6)"
         />
+
+        <Box
+          position="relative"
+          overflow="hidden"
+          w="100%"
+          h="100%"
+          borderRadius="60% 40% 30% 70%/60% 30% 70% 40%"
+        >
+          <Image
+            src="./src/assets/react.svg"
+            alt="Alejandro Vialard Santana"
+            objectFit="cover"
+            w="100%"
+            h="100%"
+          />
+        </Box>
       </Box>
 
-      <VStack 
+      <VStack
         align={{ base: "center", md: "start" }}
         maxW="600px"
+        gap={3}
       >
-        <Text 
-          fontSize="xl" 
+        <Text
+          fontSize="xl"
           color="accent.dark"
           fontWeight="medium"
         >
           ¡Hola! 👋 Soy
         </Text>
-        
-        <Heading 
-          as="h1" 
-          size="2xl" 
+
+        <Heading
+          as="h1"
+          size="2xl"
           color="textPrimary.dark"
           lineHeight="shorter"
         >
           Alejandro Vialard Santana
         </Heading>
 
-        <Text 
-          fontSize="2xl" 
+        <Text
+          fontSize="2xl"
           color="accent.dark"
           fontWeight="bold"
         >
           Ingeniero de Software
         </Text>
 
-        <Text 
-          fontSize="lg" 
+        <Text
+          fontSize="lg"
           color="textPrimary.dark"
           textAlign={{ base: "center", md: "left" }}
         >
-          Desarrollador apasionado por crear experiencias web increíbles, 
+          Desarrollador apasionado por crear experiencias web increíbles,
           especializado en tecnologías modernas y soluciones innovadoras.
         </Text>
 
-        <HStack pt={4}>
-          <Link 
-            href="https://www.linkedin.com/in/alejandrovialardsantana/" 
-            _hover={{ transform: "translateY(-2px)" }}
+        <HStack pt={4} gap={4}>
+          <Link
+            href="https://www.linkedin.com/in/alejandrovialardsantana/"
+            _hover={{ transform: "translateY(-2px)", textDecoration: "none" }}
             transition="all 0.3s"
           >
             <Button
@@ -96,14 +114,15 @@ const Home = () => (
               color="background.dark"
               _hover={{ bg: "hoverAccent.dark" }}
               size="lg"
+              w="140px"
             >
               <FaLinkedin /> LinkedIn
             </Button>
           </Link>
 
-          <Link 
-            href="https://github.com/AlejandroVialardSantana" 
-            _hover={{ transform: "translateY(-2px)" }}
+          <Link
+            href="https://github.com/AlejandroVialardSantana"
+            _hover={{ transform: "translateY(-2px)", textDecoration: "none" }}
             transition="all 0.3s"
           >
             <Button
@@ -111,6 +130,7 @@ const Home = () => (
               color="background.dark"
               _hover={{ bg: "hoverAccent.dark" }}
               size="lg"
+              w="140px"
             >
               <FaGithub /> GitHub
             </Button>
@@ -119,8 +139,10 @@ const Home = () => (
           <Button
             bg="accentSecondary.dark"
             color="textPrimary.dark"
-            _hover={{ bg: "accent.dark", color: "background.dark" }}
+            _hover={{ bg: "accent.dark", color: "background.dark", transform: "translateY(-2px)" }}
             size="lg"
+            w="180px"
+            transition="all 0.3s"
             onClick={() => window.open('/ruta-a-tu-cv.pdf')}
           >
             <FaFileDownload /> Descargar CV
