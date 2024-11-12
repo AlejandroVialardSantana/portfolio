@@ -1,5 +1,6 @@
 import ExperienceItem from "@/components/ExperienceItem";
-import { Box, Heading, VStack, useBreakpointValue } from "@chakra-ui/react";
+import SectionTitle from "@/components/SectionTitle";
+import { Box, VStack, useBreakpointValue } from "@chakra-ui/react";
 import { FaReact, FaPhp, FaGitAlt } from "react-icons/fa";
 import { SiTypescript, SiCodeigniter, SiStorybook, SiVitest, SiCypress, SiDocker } from "react-icons/si";
 
@@ -50,9 +51,7 @@ const Experience = () => {
   return (
     <Box as="section" id="experience" minH="100vh" bg="background.dark" py={20}>
       <Box maxW="1200px" mx="auto" px={padding}>
-        <Heading as="h2" size="2xl" color="textPrimary.dark" mb={12} textAlign="center">
-          Experiencia
-        </Heading>
+      <SectionTitle>Experiencia</SectionTitle>
         <VStack gap={0} align="stretch" px={{ base: 4, md: 12 }}>
           {experiences.map((exp, index) => (
             <ExperienceItem key={index} {...exp} />
