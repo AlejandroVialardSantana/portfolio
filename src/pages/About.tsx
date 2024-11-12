@@ -23,7 +23,7 @@ const About = () => {
           <FaUserGraduate size={48} color="#91A7B4" />
         </Box>
         <Text fontSize="lg" lineHeight="tall">
-          ¡Hola! Soy <Text as="span" color="accent.dark" fontWeight="bold">Alejandro Vialard Santana</Text>, 
+          ¡Muy buenas! Soy <Text as="span" color="accent.dark" fontWeight="bold">Alejandro Vialard Santana</Text>, 
           ingeniero informático por la <Text as="span" color="timeline.dark">Universidad de Las Palmas de Gran Canaria</Text>, 
           donde también realicé un año de movilidad SICUE en la <Text as="span" color="timeline.dark">Universidad de Granada</Text>.
         </Text>
