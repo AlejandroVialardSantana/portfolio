@@ -10,6 +10,7 @@ import {
   HStack,
 } from "@chakra-ui/react";
 import { FaGithub, FaLinkedin, FaFileDownload } from 'react-icons/fa';
+import perfilImage from '../assets/perfil.webp';
 
 const Home = () => (
   <Box
@@ -18,6 +19,7 @@ const Home = () => (
     minH="calc(100vh - 90px)"
     display="flex"
     alignItems="center"
+    w="100%"
     bg="background.dark"
     py={20}
   >
@@ -30,7 +32,6 @@ const Home = () => (
       justify="center"
       gap={12}
     >
-      {/* Contenedor de la imagen de perfil con forma y efecto */}
       <Box
         position="relative"
         w={{ base: "280px", md: "380px" }}
@@ -56,7 +57,7 @@ const Home = () => (
           borderRadius="60% 40% 30% 70%/60% 30% 70% 40%"
         >
           <Image
-            src="./src/assets/perfil.webp"
+            src={perfilImage}
             alt="Alejandro Vialard Santana"
             objectFit="contain"
             w="100%"
