@@ -48,7 +48,7 @@ const Home = () => (
           h="100%"
           bgGradient="radial(closest-side, rgba(145,167,180,0.5), transparent)"
           borderRadius="60% 40% 30% 70%/60% 30% 70% 40%"
-          boxShadow="0px 0px 20px rgba(145,167,180,0.6)"
+          animation="glowing 3s infinite"
         />
 
         <Box
