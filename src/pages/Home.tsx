@@ -9,8 +9,8 @@ import {
   VStack,
   HStack,
 } from "@chakra-ui/react";
-import { FaGithub, FaLinkedin, FaFileDownload } from 'react-icons/fa';
-import perfilImage from '../assets/perfil.webp';
+import { FaGithub, FaLinkedin, FaFileDownload } from "react-icons/fa";
+import perfilImage from "../assets/perfil.webp";
 
 const Home = () => (
   <Box
@@ -30,12 +30,14 @@ const Home = () => (
       direction={{ base: "column", md: "row" }}
       align="center"
       justify="center"
-      gap={12}
+      gap={{ base: 8, md: 12 }}
     >
       <Box
         position="relative"
-        w={{ base: "280px", md: "380px" }}
-        h={{ base: "280px", md: "380px" }}
+        w={{ base: "220px", sm: "280px", md: "350px", lg: "380px" }}
+        h={{ base: "220px", sm: "280px", md: "350px", lg: "380px" }}
+        mx={{ base: "auto", md: 0 }}
+        flexShrink={0}
       >
         <Box
           position="absolute"
@@ -71,20 +73,17 @@ const Home = () => (
 
       <VStack
         align={{ base: "center", md: "start" }}
-        maxW="600px"
+        maxW={{ base: "100%", md: "600px" }}
         gap={3}
+        textAlign={{ base: "center", md: "left" }}
       >
-        <Text
-          fontSize="xl"
-          color="accent.dark"
-          fontWeight="medium"
-        >
+        <Text fontSize={{ base: "lg", sm: "xl" }} color="accent.dark" fontWeight="medium">
           ¡Hola! 👋 Soy
         </Text>
 
         <Heading
           as="h1"
-          size="2xl"
+          size={{ base: "lg", sm: "xl", md: "2xl" }}
           color="textPrimary.dark"
           lineHeight="shorter"
         >
@@ -92,7 +91,7 @@ const Home = () => (
         </Heading>
 
         <Text
-          fontSize="2xl"
+          fontSize={{ base: "md", sm: "lg", md: "xl" }}
           color="accent.dark"
           fontWeight="bold"
         >
@@ -100,7 +99,7 @@ const Home = () => (
         </Text>
 
         <Text
-          fontSize="lg"
+          fontSize={{ base: "sm", md: "lg" }}
           color="textPrimary.dark"
           textAlign={{ base: "center", md: "left" }}
         >
@@ -108,7 +107,12 @@ const Home = () => (
           especializado en tecnologías modernas y soluciones innovadoras.
         </Text>
 
-        <HStack pt={4} gap={4}>
+        <HStack
+          pt={4}
+          gap={{ base: 2, md: 4 }}
+          flexWrap="wrap"
+          justify={{ base: "center", md: "start" }}
+        >
           <Link
             href="https://www.linkedin.com/in/alejandrovialardsantana/"
             _hover={{ transform: "translateY(-2px)", textDecoration: "none" }}
@@ -118,10 +122,10 @@ const Home = () => (
               bg="accent.dark"
               color="background.dark"
               _hover={{ bg: "hoverAccent.dark" }}
-              size="lg"
-              w="140px"
+              size={{ base: "md", md: "lg" }}
+              w={{ base: "120px", md: "140px" }}
             >
-              <FaLinkedin /> LinkedIn
+              <FaLinkedin style={{ marginRight: "8px" }} /> LinkedIn
             </Button>
           </Link>
 
@@ -134,10 +138,10 @@ const Home = () => (
               bg="accent.dark"
               color="background.dark"
               _hover={{ bg: "hoverAccent.dark" }}
-              size="lg"
-              w="140px"
+              size={{ base: "md", md: "lg" }}
+              w={{ base: "120px", md: "140px" }}
             >
-              <FaGithub /> GitHub
+              <FaGithub style={{ marginRight: "8px" }} /> GitHub
             </Button>
           </Link>
 
@@ -145,12 +149,12 @@ const Home = () => (
             bg="accentSecondary.dark"
             color="textPrimary.dark"
             _hover={{ bg: "accent.dark", color: "background.dark", transform: "translateY(-2px)" }}
-            size="lg"
-            w="180px"
+            size={{ base: "md", md: "lg" }}
+            w={{ base: "160px", md: "180px" }}
             transition="all 0.3s"
-            onClick={() => window.open('/ruta-a-tu-cv.pdf')}
+            onClick={() => window.open("/ruta-a-tu-cv.pdf")}
           >
-            <FaFileDownload /> Descargar CV
+            <FaFileDownload style={{ marginRight: "8px" }} /> Descargar CV
           </Button>
         </HStack>
       </VStack>
