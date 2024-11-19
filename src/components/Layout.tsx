@@ -2,6 +2,7 @@ import { ReactNode } from 'react'
 import { Flex } from '@chakra-ui/react'
 import Navbar from "./Navbar";
 import ScrollToTop from './ScrollToTop';
+import Footer from './Footer';
 
 interface LayoutProps {
   children: ReactNode;
@@ -16,6 +17,7 @@ const Layout = ({ children }: LayoutProps) => {
         {children}
       </Flex>
 
+      <Footer />
       <ScrollToTop />
     </>
   );
