@@ -1,4 +1,5 @@
 import { Box, Flex, Heading, Text, VStack, Circle, HStack } from "@chakra-ui/react";
+import { Tooltip } from "@/components/ui/tooltip"
 
 interface ExperienceItemProps {
   title: string;
@@ -6,7 +7,7 @@ interface ExperienceItemProps {
   date: string;
   type: string;
   description: string[];
-  technologies: JSX.Element[];
+  technologies: { name: string; icon: JSX.Element }[]; // Modificado para incluir nombres
 }
 
 const ExperienceItem = ({ title, company, date, type, description, technologies }: ExperienceItemProps) => (
@@ -53,10 +54,12 @@ const ExperienceItem = ({ title, company, date, type, description, technologies 
       </VStack>
       
       <HStack gap={4} mt={4}>
-        {technologies.map((TechIcon, index) => (
-          <Box key={index} as="span" fontSize="2xl" color="textPrimary.dark">
-            {TechIcon}
-          </Box>
+        {technologies.map((tech, index) => (
+          <Tooltip key={index} content={tech.name} showArrow>
+            <Box as="span" fontSize="2xl" color="textPrimary.dark">
+              {tech.icon}
+            </Box>
+          </Tooltip>
         ))}
       </HStack>
     </Box>
@@ -64,4 +67,3 @@ const ExperienceItem = ({ title, company, date, type, description, technologies 
 );
 
 export default ExperienceItem;
-

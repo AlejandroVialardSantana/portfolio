@@ -16,13 +16,13 @@ const experiences = [
       "Creé una librería de componentes en React y TypeScript, documentada en Storybook."
     ],
     technologies: [
-      <FaReact key="react" />,
-      <SiTypescript key="typescript" />,
-      <SiStorybook key="storybook" />,
-      <SiCypress key="cypress" />,
-      <SiVitest key="vitest" />,
-      <FaGitAlt key="git" />,
-      <SiDocker key="docker" />
+      { name: "React", icon: <FaReact /> },
+      { name: "TypeScript", icon: <SiTypescript /> },
+      { name: "Storybook", icon: <SiStorybook /> },
+      { name: "Cypress", icon: <SiCypress /> },
+      { name: "Vitest", icon: <SiVitest /> },
+      { name: "Git", icon: <FaGitAlt /> },
+      { name: "Docker", icon: <SiDocker /> }
     ]
   },
   {
@@ -35,12 +35,12 @@ const experiences = [
       "Colaboré en el frontend con React y Carbon Design System."
     ],
     technologies: [
-      <FaPhp key="php" />,
-      <SiCodeigniter key="codeigniter" />,
-      <FaReact key="react" />,
-      <SiTypescript key="typescript" />,
-      <FaGitAlt key="git" />,
-      <SiDocker key="docker" />
+      { name: "PHP", icon: <FaPhp /> },
+      { name: "CodeIgniter", icon: <SiCodeigniter /> },
+      { name: "React", icon: <FaReact /> },
+      { name: "TypeScript", icon: <SiTypescript /> },
+      { name: "Git", icon: <FaGitAlt /> },
+      { name: "Docker", icon: <SiDocker /> }
     ]
   }
 ];
