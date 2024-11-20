@@ -49,7 +49,7 @@ const Experience = () => {
   const padding = useBreakpointValue({ base: 4, md: 8 });
 
   return (
-    <Box as="section" id="experience" minH="100vh" bg="background.dark" py={20}>
+    <Box as="section" id="experience" bg="background.dark" py={20}>
       <Box maxW="1200px" mx="auto" px={padding}>
       <SectionTitle>Experiencia</SectionTitle>
         <VStack gap={0} align="stretch" px={{ base: 4, md: 12 }}>
